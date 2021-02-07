@@ -5,29 +5,37 @@
   margin: auto;
 }
 
-header {
-  padding: 50px;
+#background-image {
   height: 50px;
   background-repeat: no-repeat;
   background-position: 0% 15%;
   background-size: cover;
   background-image: url("./416642.jpg");
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 150px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 #title {
-  float: left;
+  position: absolute;
+  top: 50px;
+  left: 20px;
   color: #121212;
-  background-color: white;
   padding: 10px;
   border-radius: 20px;
   width: 200px;
 }
 
 #scoreboard {
-  float: right;
+  position: absolute;
+  top: 50px;
+  right: 30px;
   color: #121212;
   background-color: white;
   padding: 10px;
   border-radius: 20px;
   width: 200px;
+  font-size: 20px;
 }

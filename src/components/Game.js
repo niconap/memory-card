@@ -3,6 +3,7 @@ import uniqid from "uniqid";
 import Card from "./Card";
 
 const Game = (props) => {
+  const [clickedArray, setClickedArray] = useState([]);
   const shuffleCards = () => {
     let array = [
       "aang",
@@ -23,6 +24,19 @@ const Game = (props) => {
     setCards(array);
   };
 
+  const clickEvent = (image) => {
+    if (!clickedArray.includes(image)) {
+      shuffleCards();
+      let newArray = [...clickedArray, image];
+      setClickedArray(newArray);
+      props.updateScore(1);
+    } else {
+      shuffleCards();
+      setClickedArray([]);
+      props.updateScore(0);
+    }
+  };
+
   const [cards, setCards] = useState([
     "aang",
     "katara",
@@ -41,7 +55,7 @@ const Game = (props) => {
   return (
     <div id="game">
       {cards.map((card) => {
-        return <Card key={uniqid()} click={shuffleCards} image={card} />;
+        return <Card key={uniqid()} click={clickEvent} image={card} />;
       })}
     </div>
   );

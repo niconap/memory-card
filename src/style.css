@@ -3,6 +3,7 @@
 * {
   font-family: Papyrus, Helvetica, sans-serif;
   margin: auto;
+  overflow-x: hidden;
 }
 
 #background-image {
@@ -149,4 +150,28 @@
 
 .fire {
   background-color: rgb(255, 0, 0);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  background-color: white;
+  padding: 5px;
+  border-radius: 30px;
+  width: 150px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #121212;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

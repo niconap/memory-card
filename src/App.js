@@ -26,7 +26,11 @@ const App = () => {
         currentScore={currentScore}
         highScore={highScore}
       />
-      <footer></footer>
+      <footer>
+        <p>
+          Made by: <a href="https://github.com/niconap">Nico Nap</a>
+        </p>
+      </footer>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Game = (props) => {
       "iroh",
       "ozai",
       "mai",
-      "taili",
+      "tylee",
       "toph",
       "appa",
     ];
@@ -47,16 +47,36 @@ const Game = (props) => {
     "iroh",
     "ozai",
     "mai",
-    "taili",
+    "tylee",
     "toph",
     "appa",
   ]);
 
   return (
     <div id="game">
-      {cards.map((card) => {
-        return <Card key={uniqid()} click={clickEvent} image={card} />;
-      })}
+      <div id="gamebackground"></div>
+      <div id="cardwrapper">
+        {cards.map((card) => {
+          let element;
+          if (card === "aang" || card === "appa") {
+            element = "air";
+          } else if (card === "katara" || card === "sokka") {
+            element = "water";
+          } else if (card === "suki" || card === "toph") {
+            element = "earth";
+          } else {
+            element = "fire";
+          }
+          return (
+            <Card
+              element={element}
+              key={uniqid()}
+              click={clickEvent}
+              image={card}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

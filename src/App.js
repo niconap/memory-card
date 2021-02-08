@@ -26,6 +26,7 @@ const App = () => {
         currentScore={currentScore}
         highScore={highScore}
       />
+      <footer></footer>
     </div>
   );
 };

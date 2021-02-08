@@ -39,3 +39,114 @@
   width: 200px;
   font-size: 20px;
 }
+
+#cardwrapper {
+  width: 80%;
+}
+
+#gamebackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url("https://cdn.vox-cdn.com/thumbor/r92uf-e9ZWAwI8ircAF4NeDm2Fg=/0x0:1285x717/920x613/filters:focal(616x405:820x609):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61448953/Screen_Shot_2018_09_18_at_12.03.02_PM.0.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
+
+.card {
+  display: inline-block;
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.2s ease;
+  color: white;
+  text-align: center;
+}
+
+#aang {
+  background-image: url("./aang.png");
+}
+
+#katara {
+  background-image: url("./katara.png");
+}
+
+#mai {
+  background-image: url("./mai.png");
+}
+
+#tylee {
+  background-image: url("./taili.png");
+}
+
+#suki {
+  background-image: url("./suki.png");
+}
+
+#azula {
+  background-image: url("./azula.png");
+}
+
+#appa {
+  background-image: url("./appa.png");
+}
+
+#ozai {
+  background-image: url("./ozai.png");
+}
+
+#zuko {
+  background-image: url("./zuko.jpg");
+}
+
+#sokka {
+  background-image: url("./sokka.jpg");
+}
+
+#iroh {
+  background-image: url("./iroh.jpg");
+}
+
+#toph {
+  background-image: url("./toph.jpg");
+}
+
+.cardimage {
+  min-height: 150px;
+  min-width: 150px;
+  background-size: cover;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transform-origin: center;
+  box-shadow: 0px 0px 10px gray;
+}
+
+.air {
+  background-color: rgb(223, 224, 224);
+  color: #121212;
+}
+
+.water {
+  background-color: rgb(131, 131, 255);
+}
+
+.earth {
+  background-color: rgb(231, 174, 100);
+}
+
+.fire {
+  background-color: rgb(255, 0, 0);
+}

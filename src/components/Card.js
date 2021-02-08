@@ -2,16 +2,14 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div id="card">
-      <img id={props.image} alt="card" />
+    <div
+      className={props.element + " card"}
+      onClick={() => {
+        props.click(props.image);
+      }}
+    >
+      <div id={props.image} className="cardimage"></div>
       <p>{props.image}</p>
-      <button
-        onClick={() => {
-          props.click(props.image);
-        }}
-      >
-        Button
-      </button>
     </div>
   );
 };
